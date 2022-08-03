@@ -1,0 +1,10 @@
+from django.urls import include, path
+from rest_framework.urlpatterns import format_suffix_patterns
+
+urlpatterns = [
+    # path('', views.snippet_list),
+    path('api/', include('api.urls')),
+    # path('<int:pk>/', views.snippet_detail),
+    # path('<int:pk>/', views.TaxiDetail.as_view()),
+    # path('', views.OcafList.as_view()),
+]
