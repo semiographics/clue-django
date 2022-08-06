@@ -15,7 +15,7 @@ from django.conf import settings
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cms.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
 os.environ['LC_ALL']="en_US.UTF-8"
 os.environ['LC_LANG']="en_US.UTF-8"
 
