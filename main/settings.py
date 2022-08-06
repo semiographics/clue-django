@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # -- To run WSGI application server, comment out DEBUG = True
 # -- and uncomment everything below
 # SSL/HTTPS
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 
 # Strict-Transport-Security
 SECURE_HSTS_SECONDS = 3600
