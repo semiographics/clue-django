@@ -8,6 +8,6 @@ urlpatterns = [
     # path('<int:pk>/', views.snippet_detail),
     # path('<int:pk>/', views.TaxiDetail.as_view()),
     # path('', views.OcafList.as_view()),
-    path('mike/', TemplateView.as_view(template_name="ocaf/ocaf.html")), ##views.index, name='index'
+    path('mike', TemplateView.as_view(template_name="ocaf/ocaf.html")), ##views.index, name='index'
 
 ]
