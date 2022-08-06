@@ -30,7 +30,7 @@ DEBUG = True
 env = environ.Env()
 env.read_env(env.str(str(BASE_DIR),'.env'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.clueresearch.com', '127.0.0.1', 'localhost']
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -93,7 +93,7 @@ DATABASES = {
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASS'),
         'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 
@@ -138,3 +138,21 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# DEBUG = True
+# -- To run development server, set Debug = True
+# -- and comment out everything below
+
+# -- To run WSGI application server, comment out DEBUG = True
+# -- and uncomment everything below
+# SSL/HTTPS
+# SECURE_SSL_REDIRECT = True
+
+# Strict-Transport-Security
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Cookies
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
