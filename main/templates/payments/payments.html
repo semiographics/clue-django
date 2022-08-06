@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lange="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://sandbox.web.squarecdn.com/v1/square.js"
+    ></script>
+    {% load static %}
+    <script src="{% static 'scripts/payments.js' %}"></script>
+    <meta charset="utf-8" />
+    <title>Square Web Payments</title>
+    <link rel="stylesheet" href="{% static 'styles/dark-mode.css' %}" type="text/css"/>
+  </head>
+  <body>
+    <div>
+      <h1>Payments</h1>
+      <p>Welcome<br>
+        { primary_recipient.given_name,<br>
+          primary_recipient.family_name }</p><br>
+      <p>The invoice # is <br>
+        { invoice.id }</p><a>link to invoice</a>
+      <p>The remaining balance is <br>
+        { invoice.payment_requests.computed_amount_money<br>
+           - invoice.payment_requests.total_completed_amount_money }</p><br>
+      <p>Use the secure payment application below, and please call us with any questions or if you need assistance.</p>
+    </div>
+    <form id="payment-form">
+      <div id="card-container"></div>
+      <button id="card-button" type="button">Pay $1.00</button>
+    </form>
+    <div id="payment-status-container"></div>   
+  </body>
+</html>
