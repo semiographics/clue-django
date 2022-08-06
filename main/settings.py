@@ -33,6 +33,7 @@ env.read_env(env.str(str(BASE_DIR),'.env'))
 ALLOWED_HOSTS = ['.clueresearch.com', '127.0.0.1', 'localhost']
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
