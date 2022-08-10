@@ -19,4 +19,4 @@ class OperatingCostAdjustmentFactors(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = {'year': ["in", "gte", "gt", "lte", "lt", "range"],
                         'state': ["in", "iexact", "istartswith", "icontains"]}
-    renderer_classes = (r.CSVRenderer, ) + tuple(api_settings.)
+    renderer_classes = (r.CSVRenderer, )
