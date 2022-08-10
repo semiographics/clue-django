@@ -1,0 +1,114 @@
+/* CSS - Cascading Style Sheet */
+.cls-1 {
+  fill: #202020;
+}
+
+.cls-3 {
+  fill: #2c689c;
+}
+
+.cls-3:hover {
+  fill: #2b6597;
+  stroke: #000000 1pt;
+}
+
+.cls-4 {
+  fill: #917543;
+  stroke: none;
+}
+
+.cls-4:hover {
+  fill: #5a6722;
+  outline: 3px solid #8f3d58;
+}
+
+.cls-5 {
+  fill: #917543;
+  stroke: none;
+}
+
+.cls-5:hover {
+  fill: #5a6722;
+  outline: 3px solid #8f3d58;
+}
+
+#clue-type path {
+  fill: #2c689c;
+  -webkit-animation: fade 3s forwards;
+          animation: fade 3s forwards;
+}
+
+#clue-type path:hover {
+  fill: #b24745;
+  -webkit-transform: translate(25px, 10px);
+          transform: translate(25px, 10px);
+}
+
+@-webkit-keyframes line-anim {
+  from {
+    opacity: 1;
+    stroke: #917543;
+    stroke-width: 15;
+  }
+  to {
+    opacity: 1;
+    stroke: #b24745;
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-anim {
+  from {
+    opacity: 1;
+    stroke: #917543;
+    stroke-width: 15;
+  }
+  to {
+    opacity: 1;
+    stroke: #b24745;
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+#clue-type path.clue {
+  padding: 50px;
+  stroke: #2c689c;
+  stroke-width: 8px;
+  stroke-dasharray: 1370px;
+  stroke-dashoffset: 1370px;
+  -webkit-animation: line-anim 1.5s 2;
+          animation: line-anim 1.5s 2;
+}
+
+#clue-type path.land {
+  padding: 50px;
+  stroke: #2c689c;
+  stroke-width: 8px;
+  stroke-dasharray: 1420px;
+  stroke-dashoffset: 1420px;
+  -webkit-animation: line-anim 1.5s .25s 2;
+          animation: line-anim 1.5s .25s 2;
+}
+
+#clue-type path.use {
+  padding: 50px;
+  stroke: #2c689c;
+  stroke-width: 8px;
+  stroke-dasharray: 1660px;
+  stroke-dashoffset: 1660px;
+  -webkit-animation: line-anim 1.5s 0.5s 2;
+          animation: line-anim 1.5s 0.5s 2;
+}
+
+#clue-type path.econ {
+  padding: 50px;
+  stroke: #2c689c;
+  stroke-width: 8px;
+  stroke-dasharray: 1670px;
+  stroke-dashoffset: 1670px;
+  -webkit-animation: line-anim 1.5s .75s 2;
+          animation: line-anim 1.5s .75s 2;
+}
+/*# sourceMappingURL=svg-styles.css.map */
