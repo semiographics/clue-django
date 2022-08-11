@@ -20,6 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 env.read_env(env.str(str(BASE_DIR),'.env'))
 
+SECRET_KEY = env('SECRET_KEY')
+
 ALLOWED_HOSTS = ['.clueresearch.com', '127.0.0.1', 'localhost']
 
 REST_FRAMEWORK = {
