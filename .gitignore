@@ -1,7 +1,0 @@
-__pycache__/
-venv/
-git-remote-push-deploy.bat
-config.ini
-.env
-.gitattributes
-.gitignore
