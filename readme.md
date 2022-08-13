@@ -33,7 +33,7 @@ The table 'ocaf' is constructed via ocaf.sql, which includes the full dataset as
 
 For future years, the file upsert.sql creates an empty table with which to append new records.
 
-Both operations are stated in the psql scripts contained in the batch files ocaf.bat and upsert.bat
+Both operations are defined in the psql scripts contained in the batch files ocaf.bat and upsert.bat
 
 ## api/postgresql/ocaf_model.csv
 The full dataset is available here as CSV.
