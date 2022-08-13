@@ -1,6 +1,6 @@
 clue-django
 ===========
-A simple JSON server built with Django REST Framework
+A basic JSON server built with Django REST Framework
 
 ## About
 This is a basic implementation of the Django REST Framework containing a single dataset; the API is available at www.clueresearch.com/api/ocaf
