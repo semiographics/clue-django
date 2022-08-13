@@ -22,6 +22,9 @@ The database is constructed with PostgreSQL using the SQL files contained in the
 ## api/views.py
 The 'browsable' api main view is classed from generics.ListAPIView and references 'OcafSerializer' from api/serializers.py and 'Ocaf' from api/models.py 
 
+The filterset fields and corresponding list of conditions control how the dataset can be queried via the url such as:
+    www.clueresearch/api/ocaf?year__gte=2018&state__in=Ohio,Nevada
+
 ## api/serializers.py
 'OcafSerializer' is classed from serializers.ModelSerializer and references 'Ocaf' from api/models.py
 
