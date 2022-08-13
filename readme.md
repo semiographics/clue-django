@@ -7,6 +7,7 @@ This is a basic implementation of the Django REST Framework containing a single 
 
 ## requirements.txt
 Use pip to install the Python packages listed in requirements.txt.  A virtual environment is recommended.
+`pip install -r requirements.txt`
 
 ## Start the Django Development Server
 Use `npm run dev` to start the development server on `http:/localhost:8000`.
@@ -20,12 +21,12 @@ During development, set `DEBUG = TRUE` in the settings.py module and comment out
 To run the application on a production server, set `DEBUG = FALSE` and uncomment the code under the above comment headings.
 
 ## wsgi.py
-The application framework uses a Web Server Gateway Interface (WSGI) to control an HTTP server.
+The application framework uses a Web Server Gateway Interface (WSGI) to control the HTTP server.
 
 ## main/settings.py
 The settings.py module controls the application framework.
 
-The database can be constructed with PostgreSQL using the SQL files contained in the api/ folder. Database credentials can be placed in a file named '.env' and referenced via:
+The database can be constructed in PostgreSQL using the SQL files contained in the api/ folder. Database credentials can be placed in a file named '.env' and referenced via:
 
     env = environ.Env()
     env.read_env(env.str(str(BASE_DIR),'.env'))
