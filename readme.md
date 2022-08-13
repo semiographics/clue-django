@@ -1,9 +1,9 @@
 clue-django
 ===========
-A basic JSON server built with Django REST Framework
+A basic read-only JSON server built with Django REST Framework
 
 ## About
-This is a basic implementation of the Django REST Framework containing a single dataset; the API is available at www.clueresearch.com/api/ocaf
+This is a basic implementation of the Django REST Framework containing a single dataset; the read-only API is available at www.clueresearch.com/api/ocaf
 
 ## requirements.txt
 Use pip to install the Python packages listed in requirements.txt.  A virtual environment is recommended.
