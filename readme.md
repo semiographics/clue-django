@@ -14,7 +14,7 @@ The application framework uses a Web Server Gateway Interface (WSGI) to control 
 ## main/settings.py
 The settings.py module controls the application framework.
 
-The database is constructed with PostgreSQL using the SQL files contained in the api/ folder. Database credentials can be placed in a file named '.env' and referenced via:
+The database can be constructed with PostgreSQL using the SQL files contained in the api/ folder. Database credentials can be placed in a file named '.env' and referenced via:
 
     env = environ.Env()
     env.read_env(env.str(str(BASE_DIR),'.env'))
@@ -23,7 +23,7 @@ The database is constructed with PostgreSQL using the SQL files contained in the
 The 'browsable' api main view is classed from generics.ListAPIView and references 'OcafSerializer' from api/serializers.py and 'Ocaf' from api/models.py 
 
 The filterset fields and corresponding list of conditions control how the dataset can be queried via the url such as:
-    www.clueresearch/api/ocaf?year__gte=2018&state__in=Ohio,Nevada
+    www.clueresearch.com/api/ocaf?year__gte=2018&state__in=Ohio,Nevada
 
 ## api/serializers.py
 'OcafSerializer' is classed from serializers.ModelSerializer and references 'Ocaf' from api/models.py
