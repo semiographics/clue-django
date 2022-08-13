@@ -13,9 +13,9 @@ Use `npm run dev` to start the development server on `http:/localhost:8000`.
 
 During development, set `DEBUG = TRUE` in the settings.py module and comment out the code under the following comment headings:
 
-SSL/HTTPS
-Strict-Transport-Security
-Cookies
+- SSL/HTTPS
+- Strict-Transport-Security
+- Cookies
 
 To run the application on a production server, set `DEBUG = FALSE` and uncomment the code under the above comment headings.
 
