@@ -8,6 +8,17 @@ This is a basic implementation of the Django REST Framework containing a single 
 ## requirements.txt
 Use pip to install the Python packages listed in requirements.txt.  A virtual environment is recommended.
 
+## Start the Django Development Server
+Use `npm run dev` to start the development server on `http:/localhost:8000`.
+
+During development, set `DEBUG = TRUE` in the settings.py module and comment out the code under the following comment headings:
+
+SSL/HTTPS
+Strict-Transport-Security
+Cookies
+
+To run the application on a production server, set `DEBUG = FALSE` and uncomment the code under the above comment headings.
+
 ## wsgi.py
 The application framework uses a Web Server Gateway Interface (WSGI) to control an HTTP server.
 
