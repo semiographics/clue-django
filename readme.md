@@ -19,6 +19,17 @@ The database can be constructed with PostgreSQL using the SQL files contained in
     env = environ.Env()
     env.read_env(env.str(str(BASE_DIR),'.env'))
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': env('DATABASE_NAME'),
+            'USER': env('DATABASE_USER'),
+            'PASSWORD': env('DATABASE_PASS'),
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+        }
+    }
+
 ## api/views.py
 The 'browsable' api main view is classed from generics.ListAPIView and references 'OcafSerializer' from api/serializers.py and 'Ocaf' from api/models.py 
 
