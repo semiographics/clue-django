@@ -10,7 +10,7 @@ Use pip to install the Python packages listed in requirements.txt.  A virtual en
 `pip install -r requirements.txt`
 
 ## Start the Django Development Server
-Use `npm run dev` to start the development server on `http:/localhost:8000`.
+Use `py manage.py runserver` to start the development server on `http:/localhost:8000`.
 
 During development, set `DEBUG = TRUE` in the settings.py module and comment out the code under the following comment headings:
 
