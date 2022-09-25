@@ -26,4 +26,4 @@ class TaxiEdges1Week(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = {'interval': ["in", "gte", "gt", "lte", "lt", "range"],
                         'Pickup_Community_Area': ["in", "gte", "gt", "lte", "lt", "range"],
-                        'Dropoff_Community_Area': ["in", "gte", "gt", "lte", "lt", "range"] }
+                        'Dropoff_Community_Area': ["in", "gte", "gt", "lte", "lt", "range"]}
