@@ -679,4 +679,3 @@ COPY ocaf (year, state, ocaf, sewer, wages, benefits, goods, insurance, proptax,
 2022	West Virginia	3.3	0.0344	0.0299	0.0248	0.0495	0	0.0486	-0.014	0.021	-0.151
 2022	Wisconsin	3.3	0.0344	0.0299	0.0248	0.0495	0	0.0486	-0.013	-0.021	-0.31
 2022	Wyoming	3.1	0.0344	0.0299	0.0248	0.0495	0	0.0486	0.032	0.097	-0.18
-\.
