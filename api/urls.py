@@ -4,7 +4,7 @@ from api import views
 
 urlpatterns = [
     path('ocaf', views.OperatingCostAdjustmentFactors.as_view()),
-
+    path('edges', views.TaxiEdges1Week.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

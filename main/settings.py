@@ -25,6 +25,8 @@ SECRET_KEY = env('SECRET_KEY')
 ALLOWED_HOSTS = ['.clueresearch.com', '127.0.0.1', 'localhost']
 
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest.framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 1000,
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
@@ -130,7 +132,9 @@ USE_TZ = True
 
 STATIC_ROOT = 'static/'
 STATIC_URL = 'static/'
-
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"
+#     ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

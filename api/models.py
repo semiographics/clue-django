@@ -48,3 +48,25 @@ class Ocaf(models.Model):
         managed = False
         db_table = 'ocaf'
         unique_together = (('year', 'state'),)
+
+class edges1week(models.Model):
+    interval = models.DateTimeField(primary_key=True)
+    Pickup_Community_Area = models.TextField()
+    Dropoff_Community_Area = models.TextField()
+    tripcount = models.DecimalField(max_digits=11,decimal_places=0,blank=True, null=True)
+    faresum = models.DecimalField(max_digits=13,decimal_places=2,blank=True, null=True)
+    fareavg = models.DecimalField(max_digits=13,decimal_places=2,blank=True, null=True)
+    farestddevp = models.DecimalField(max_digits=13,decimal_places=2,blank=True, null=True)
+    faremedian = models.DecimalField(max_digits=13,decimal_places=2,blank=True, null=True)
+    timeavg = models.DecimalField(max_digits=11,decimal_places=0,blank=True, null=True)
+    timestddevp = models.DecimalField(max_digits=11,decimal_places=0,blank=True, null=True)
+    timemedian = models.DecimalField(max_digits=11,decimal_places=0,blank=True, null=True)
+    mileavg = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
+    milestddevp = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
+    milemedian = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
+    avgdirdeg = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'taxi_edges_1week'
+        unique_together = (('interval','Pickup_Community_Area','Dropoff_Community_Area'),)

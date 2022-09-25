@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Ocaf
+from api.models import Ocaf, edges1week
 
 # class TaxiSerializer(serializers.ModelSerializer):
 #     class Meta:
@@ -35,13 +35,33 @@ class OcafSerializer(serializers.ModelSerializer):
         fields = ['year',
                   'state',
                   'ocaf',
-                  'sewer',
-                  'wages',
-                  'benefits',
-                  'goods',
-                  'insurance',
-                  'proptax',
-                  'elec',
-                  'gas',
-                  'oil'
+                  # 'sewer',
+                  # 'wages',
+                  # 'benefits',
+                  # 'goods',
+                  # 'insurance',
+                  # 'proptax',
+                  # 'elec',
+                  # 'gas',
+                  # 'oil'
+                ]
+
+class edges1weekSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = edges1week
+        fields = ['interval',
+                  'Pickup_Community_Area',
+                  'Dropoff_Community_Area',
+                  'tripcount',
+                  'faresum',
+                  'fareavg',
+                  'farestddevp',
+                  'faremedian',
+                  # 'timeavg',
+                  # 'timestddevp',
+                  # 'timemedian',
+                  # 'mileavg',
+                  # 'milestddevp',
+                  # 'milemedian',
+                  # 'avgdirdeg'
                 ]
