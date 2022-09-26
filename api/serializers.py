@@ -35,15 +35,15 @@ class OcafSerializer(serializers.ModelSerializer):
         fields = ['year',
                   'state',
                   'ocaf',
-                  # 'sewer',
-                  # 'wages',
-                  # 'benefits',
-                  # 'goods',
-                  # 'insurance',
-                  # 'proptax',
-                  # 'elec',
-                  # 'gas',
-                  # 'oil'
+                  'sewer',
+                  'wages',
+                  'benefits',
+                  'goods',
+                  'insurance',
+                  'proptax',
+                  'elec',
+                  'gas',
+                  'oil'
                 ]
 
 class edges1weekSerializer(serializers.ModelSerializer):
@@ -57,11 +57,11 @@ class edges1weekSerializer(serializers.ModelSerializer):
                   'fareavg',
                   'farestddevp',
                   'faremedian',
-                  # 'timeavg',
-                  # 'timestddevp',
-                  # 'timemedian',
-                  # 'mileavg',
-                  # 'milestddevp',
-                  # 'milemedian',
-                  # 'avgdirdeg'
+                  'timeavg',
+                  'timestddevp',
+                  'timemedian',
+                  'mileavg',
+                  'milestddevp',
+                  'milemedian',
+                  'avgdirdeg'
                 ]
