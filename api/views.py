@@ -6,7 +6,6 @@ from api.models import Ocaf, edges1week
 from api.serializers import OcafSerializer, edges1weekSerializer
 from rest_framework_csv import renderers as r
 
-
 # class TaxiList(generics.ListAPIView):
 #     queryset = ChicagoTaxi.objects.all()
 #     serializer_class = TaxiSerializer

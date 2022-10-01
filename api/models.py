@@ -50,7 +50,7 @@ class Ocaf(models.Model):
         unique_together = (('year', 'state'),)
 
 class edges1week(models.Model):
-    interval = models.DateTimeField(primary_key=True,blank=True, null=True)
+    interval = models.DateTimeField(primary_key=True,blank=True)
     Pickup_Community_Area = models.TextField(blank=True, null=True)
     Dropoff_Community_Area = models.TextField(blank=True, null=True)
     tripcount = models.DecimalField(max_digits=11,decimal_places=0,blank=True, null=True)

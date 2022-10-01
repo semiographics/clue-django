@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CLUE Research</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="keywords" content="Specifies a comma-separated list of keywords - relevant to the page (Informs search engines what the page is about)."> -->
+        {% load static %}
+        <meta property="og:url" content="http://www.clueresearch.com/" />
+        <meta property="og:title" content="CLUE Research" />
+        <meta property="og:description" content="CLUE Research Landing Page" />
+        <meta property="og:image" content="{% static 'main.png' %}"/>
+        <meta property="og:type" content="website" />
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}" type="text/css"/>
+    </head>
+    <body>
+        <div class="fallingwater">
+            <div id="logo" class="logo">
+                <script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+                <div class='tableauPlaceholder' style='width: 1000px; height: 850px;'>
+                    <object class='tableauViz' width='1000' height='850' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fprod-useast-a.online.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='&#47;t&#47;clueresearch' />
+                        <param name='name' value='ChicagoTaxiFlows&#47;Dashboard1' />
+                        <param name='tabs' value='yes' /><param name='toolbar' value='yes' />
+                        <param name='showAppBanner' value='false' />
+                    </object>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
