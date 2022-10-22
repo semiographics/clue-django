@@ -62,6 +62,5 @@ class edges1weekSerializer(serializers.ModelSerializer):
                   'timemedian',
                   'mileavg',
                   'milestddevp',
-                  'milemedian',
-                  'avgdirdeg'
+                  'milemedian'
                 ]

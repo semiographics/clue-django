@@ -1,3 +1,4 @@
+from asyncio import constants
 from django.db import models
 
 # class ChicagoTaxi(models.Model):
@@ -47,7 +48,9 @@ class Ocaf(models.Model):
     class Meta:
         managed = False
         db_table = 'ocaf'
-        unique_together = (('year', 'state'),)
+        constraints = [
+            models.UniqueConstraint(fields=['year','state'], name='unique year state')
+        ]
 
 class edges1week(models.Model):
     interval = models.DateTimeField(primary_key=True,blank=True)
@@ -64,9 +67,8 @@ class edges1week(models.Model):
     mileavg = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
     milestddevp = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
     milemedian = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
-    avgdirdeg = models.DecimalField(max_digits=12,decimal_places=1,blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'taxi_edges_1week'
+        db_table = 'edges_1wk_taxi_chi'
         unique_together = (('interval','Pickup_Community_Area','Dropoff_Community_Area'),)
