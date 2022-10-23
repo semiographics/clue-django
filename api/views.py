@@ -48,6 +48,6 @@ def vote(request, ocaf_id):
     return HttpResponse("You're voting on Ocaf %s." % ocaf_id)
 
 def index(request):
-    edge_items = edges1week.objects.order_by('interval')[:10]
+    edge_items = edges1week.objects.order_by('interval')[1:10]
     context = { 'johnny': edge_items, }
     return render(request, 'taxi.html', context)
