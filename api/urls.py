@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('ocaf', views.OperatingCostAdjustmentFactors.as_view()),
-    path('edges',views.index, name='edges'),
+    path('edges/<start>/<end>',views.index, name='edges'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

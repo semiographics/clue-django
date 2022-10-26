@@ -47,7 +47,7 @@ def results(request, ocaf_id):
 def vote(request, ocaf_id):
     return HttpResponse("You're voting on Ocaf %s." % ocaf_id)
 
-def index(request):
-    edge_items = edges1week.objects.order_by('interval')[1:10]
+def index(request, start, end):
+    edge_items = edges1week.objects.filter(interval__range=(start,end)).order_by('Pickup_Community_Area')
     context = { 'johnny': edge_items, }
     return render(request, 'taxi.html', context)

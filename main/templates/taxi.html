@@ -19,7 +19,7 @@
             {% if johnny %}
                 <ul>
                 {% for item in johnny %}
-                    <li>{{ item.interval }}</li>
+                    <li>{{ item.interval }},{{ item.Pickup_Community_Area }},{{ item.Dropoff_Community_Area }},{{ item.faresum }}</li>
                 {% endfor %}
                 </ul>
             {% else %}
