@@ -1,5 +1,6 @@
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, StreamingHttpResponse
 from django_filters.rest_framework import DjangoFilterBackend
+from django.template.loader import render_to_string
 
 from rest_framework import generics
 from api.models import Ocaf, edges1week
@@ -47,7 +48,12 @@ def results(request, ocaf_id):
 def vote(request, ocaf_id):
     return HttpResponse("You're voting on Ocaf %s." % ocaf_id)
 
+# def index(request, start, end):
+#     edge_items = edges1week.objects.filter(interval__range=(start,end))
+#     context = { 'johnny': edge_items, }
+#     return render(request, 'taxi.html', context)
+
 def index(request, start, end):
-    edge_items = edges1week.objects.filter(interval__range=(start,end)).order_by('Pickup_Community_Area')
+    edge_items = Ocaf.objects.all()
     context = { 'johnny': edge_items, }
     return render(request, 'taxi.html', context)

@@ -19,9 +19,10 @@
             {% if johnny %}
                 <ul>
                 {% for item in johnny %}
-                    <li>{{ item.interval }},{{ item.Pickup_Community_Area }},{{ item.Dropoff_Community_Area }},{{ item.faresum }}</li>
+                    <li>{{ item.year }},{{ item.state }},{{ item.ocaf }}</li>
                 {% endfor %}
                 </ul>
+            {% lorem 10 p %}
             {% else %}
             <p>No data available.</p>
             {% endif %}

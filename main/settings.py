@@ -80,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -137,26 +136,27 @@ STATIC_URL = 'static/'
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static"
 #     ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# DEBUG = True
+DEBUG = True
 # -- To run development server, set Debug = True
 # -- and comment out everything below
 
 # -- To run WSGI application server, comment out DEBUG = True
 # -- and uncomment everything below
 
-# SSL/HTTPS
-SECURE_SSL_REDIRECT = True
+# # SSL/HTTPS
+# SECURE_SSL_REDIRECT = True
 
-# Strict-Transport-Security
-SECURE_HSTS_SECONDS = 3600
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+# # Strict-Transport-Security
+# SECURE_HSTS_SECONDS = 3600
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
 
-# Cookies
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# # Cookies
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
