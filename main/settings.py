@@ -146,8 +146,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # -- To run development server, set Debug = True
 # -- and comment out everything below
 
-# -- To run WSGI application server, comment out DEBUG = True
-# -- and uncomment everything below
+# # -- To run WSGI application server, comment out DEBUG = True
+# # -- and uncomment everything below
 
 # SSL/HTTPS
 SECURE_SSL_REDIRECT = True
