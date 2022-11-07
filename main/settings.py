@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import environ, os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,9 +134,9 @@ USE_TZ = True
 
 # STATIC_ROOT = 'static/'
 # STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static"
-#     ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+    ]
 
 
 USE_S3 = env('USE_S3') == 'TRUE'
@@ -155,13 +155,9 @@ if USE_S3:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 else:
     STATIC_URL = '/staticfiles/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-MEDIA_URL = '/mediafiles/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
+    STATIC_ROOT = [
+        BASE_DIR, 'staticfiles'
+    ]
 
 
 # Default primary key field type

@@ -1,5 +1,18 @@
 /* CSS - Cascading Style Sheet */
 
+body {
+  color: var(--color-complement-1a);
+  background-color: var(--color-background-1);
+  margin:auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  /* height:max-content; */
+  /* grid-template-rows: 1fr 5fr 5fr 1fr; */
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
 $color-primary-1-0: #8f3d58 ;	    
 $color-primary-1-1: #b34d6e ;
 $color-primary-1-2: #c2708b ;

@@ -1,6 +1,6 @@
 <svg id="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1200">
   <defs>
-  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="styles/svg-styles.css" type="text/css" />
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="{% styles/svg-styles.css %}" type="text/css" />
   </defs>
   <g id="background">
     <rect class="cls-1" width="2000" height="1200"/>
@@ -59,5 +59,5 @@
     <path class="cls-5" d="M1489.47,328.11h-3.66l-2.4,16.4-8.34.53-.63,6h8.06l-2.74,24.6a53.6,53.6,0,0,0-.46,6.63c0,8.72,2.63,14.61,8.46,14.61a13.11,13.11,0,0,0,9.77-4.63l-1.43-5.88c-2,2.1-4.46,3.68-7.2,3.68-3.14,0-5.14-3.05-5.14-9.57a36,36,0,0,1,.28-4.63l2.8-24.81h13.72l.74-6.52h-13.66Z"/>
     <path class="cls-5" d="M1532.56,344.51l-1.14,6.42h-.23c-1.55-4.63-4.52-7.68-8.46-7.68-8.46,0-15.26,15.77-15.26,34.06,0,12.73,3.77,19.56,9.49,19.56,3.6,0,7.26-3.58,10.17-9h.23l-.4,7.78h3.6l5.6-51.1Zm-4.74,35.64c-3,6.52-6.46,9.89-9.49,9.89-3.83,0-6.34-4.42-6.34-14,0-13.66,5-26,11.31-26,2.57,0,5.2,2.11,7.09,7.47Z"/>
   </g>
-  <script xmlns="http://www.w3.org/2000/svg" type="text/javascript" href="scripts/svg-app.js"/>
+  <script type="application/javascript" href="{% scripts/svg-app.js %}"/>
 </svg>
