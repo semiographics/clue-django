@@ -9,5 +9,6 @@ urlpatterns = [
     path('tableau/chicago-FHV-industry-2022', views.fhv_pdf, name='ChicagoFHVs'),
     path('viz/portfolio', views.portfolio_pdf, name='VizPortfolio'),
     path('adam/resume', views.resume_pdf, name='CurrentResume'),
+    path('rhizomatic/', views.rhizomatic, name='rhizomatic'),
     path('taxi/', TemplateView.as_view(template_name="taxi.html")),
 ]

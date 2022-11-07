@@ -52,7 +52,7 @@ def index(request, start, end):
     edge_items = edges1week.objects.filter(interval__range=(start,end))
     context = { 'johnny': edge_items, }
     return render(request, 'taxi.html', context)
-
+    
 # def index(request, start, end):
 #     edge_items = Ocaf.objects.all()
 #     context = { 'johnny': edge_items, }

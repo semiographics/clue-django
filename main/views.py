@@ -1,4 +1,5 @@
-from django.http import FileResponse, Http404
+from django.http import FileResponse, Http404, HttpResponse
+from django.shortcuts import render
 
 def fhv_pdf(request):
     try:
@@ -17,3 +18,6 @@ def resume_pdf(request):
         return FileResponse(open('Childers.Adam.Resume.220928.pdf','rb'), content_type='application/pdf')
     except FileNotFoundError:
         raise Http404()
+
+def rhizomatic(request):
+    return render(request, 'rhizomatic.html')
